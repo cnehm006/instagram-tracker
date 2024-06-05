@@ -1,17 +1,10 @@
-@font-face {
-    font-family: 'Mona Sans';
-    src: url('/fonts/mona-sans.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
-    font-family: 'Mona Sans', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     display: flex;
-    flex-direction: column; /* Aligns children vertically */
-    align-items: center; /* Centers children horizontally */
-    justify-content: flex-start; /* Aligns children to the top */
-    min-height: 100vh; /* Ensures the body takes at least the height of the viewport */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
     margin: 0;
     padding: 20px;
     background-color: #f4f4f4;
@@ -23,26 +16,26 @@ a {
 }
 
 textarea {
-    width: 280px; /* Ensures the width matches the buttons */
-    height: 50px; /* Fixed height */
+    width: 280px;
+    height: 50px;
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     background: white;
     outline: none;
-    font-family: 'Mona Sans', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
-    resize: none; /* Disables resizing of the textarea */
+    resize: none;
 }
 
 select, button {
-    width: 300px; /* Matches the width of the textarea */
+    width: 300px;
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
     background: white;
-    font-family: 'Mona Sans', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
 }
 

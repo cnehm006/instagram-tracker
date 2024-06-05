@@ -1,0 +1,114 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#site-header {
+    display: flex;
+    flex-direction: row;
+    max-width: 950px;
+    width: 100%;
+    text-align: left;
+    padding-left: 100px;
+    background-color: #ffffff;
+}
+
+#site-header h1 {
+    margin: 10px 0;
+    font-size: 32px;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 950px;
+    width: 100%;
+    align-self: center;
+}
+
+aside#navigation {
+    position: sticky;
+    top: 0;
+    flex: 0 0 200px;
+    background-color: #ffffff;
+    padding-top: 40px;
+    padding-left: 0;
+    height: 85vh;
+}
+
+aside#navigation h3 {
+    font-size: 1.6rem;
+    margin-top: 0;
+}
+
+aside#navigation ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+aside#navigation li a {
+    text-decoration: none;
+    color: #0077cc;
+    display: block;
+    padding: .5rem 1rem;
+    transition: background-color 0.3s;
+    width: 150px;
+}
+
+aside#navigation li a:hover {
+    background-color: #f0f0f0;
+}
+
+main {
+    flex-grow: 1;
+    padding: 32px 8px;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+header {
+    width: 100%;
+    padding: 10px 0;
+}
+
+h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin: 0 0 24px;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+p {
+    margin: 8px 0 0;
+    line-height: 1.2em;
+    color: #555555;
+}
+
+h4 {
+    margin: 24px 0 12px;
+}
+
+strong {
+    font-weight: 600;
+    color: inherit;
+}
