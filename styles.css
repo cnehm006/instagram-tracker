@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Mona Sans';
+    src: url('/fonts/mona-sans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Mona Sans', sans-serif;
+    display: flex;
+    flex-direction: column; /* Aligns children vertically */
+    align-items: center; /* Centers children horizontally */
+    justify-content: flex-start; /* Aligns children to the top */
+    min-height: 100vh; /* Ensures the body takes at least the height of the viewport */
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+textarea {
+    width: 280px; /* Ensures the width matches the buttons */
+    height: 50px; /* Fixed height */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: white;
+    outline: none;
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 16px;
+    resize: none; /* Disables resizing of the textarea */
+}
+
+select, button {
+    width: 300px; /* Matches the width of the textarea */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    background: white;
+    font-family: 'Mona Sans', sans-serif;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.section {
+    flex: 1;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listOutput {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.listOutput h2 {
+    margin-top: 0;
+    color: #0077cc;
+    font-size: 24px;
+}
+
+.entry-list {
+    text-align: left;
+    padding: 10px;
+}
+
+#lastUpdated {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram List Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-container">
+        <div id="followers-container" class="section">
+            <div id="followersOutput" class="listOutput"><h2>Followers</h2></div>
+        </div>
+        <div id="controls-container" class="section">
+            <a href="https://stackoverflow.com/a/62722236" target="_blank">https://stackoverflow.com/a/62722236</a>
+            <p>User ID: 5709337656</p>
+            <textarea id="userInput" placeholder="Paste Instagram usernames here..."></textarea>
+            <select id="listType">
+                <option value="followers">Followers</option>
+                <option value="following">Following</option>
+            </select>
+            <button onclick="loadList()">Load List</button>
+            <button onclick="compareList()">Compare List</button>
+            <button onclick="downloadList()">Download Both Lists</button>
+            <button onclick="uploadList()">Upload List</button>
+        </div>
+        <div id="following-container" class="section">
+            <div id="followingOutput" class="listOutput"><h2>Following</h2></div>
+        </div>
+    </div>
+    <div id="lastUpdated">Last Updated: Never</div>
+    <script src="script.js"></script>
+</body>
+</html>
