@@ -16,22 +16,43 @@
             <ul>
                 <li><a href="#introduction">Introduction</a></li>
                 <li><a href="#gettingStarted">Getting Started</a></li>
-                <li><a href="#example">Example</a></li>
+                <li><a href="#steps">Steps</a></li>
             </ul>
         </aside>
         <main>
             <section id="introduction">
                 <h2>Introduction</h2>
                 <p><strong>Welcome to the InstagramTracker documentation!</strong></p>
-                <p>So you’ve decided to take your Instagram game to the next level, huh? Think of this tool as your little backstage pass to the Instagram show. With it, you’re not just watching the story unfold—you’re getting the director’s cut. It’s like having a superpower to peek behind the curtain, seeing who’s joined the audience and who’s ducked out early.</p>
+                <p>So you’ve decided to take your Instagram game to the next level, huh? Think of this tool as your little backstage pass to the Instagram show. With it, you’re not just watching the story unfold - you’re getting the director’s cut. It’s like having a superpower to peek behind the curtain, seeing who’s joined the audience and who’s ducked out early.</p>
             </section>
             <section id="gettingStarted">
                 <h4>Getting Started</h4>
-                <p>Detailed instructions on how to use the InstagramTracker.</p>
+                <p>So, you'll need to retrieve the Instagram user ID of the user you want to track, and then use browser developer tools to send a request for your followers or following list. This involves running a few scripts in your browser's console to gather the necessary data. Ensure you're logged into Instagram and not in incognito mode for this process to work. This method will work if it's a public account OR if it's a private account and you're following it, because we're just web scraping and not actually accessing the Instagram API. Only the information already available to you will work with this, so no luck if you're blocked. This step-by-step tutorial includes every step needed.</p>
             </section>
-            <section id="example">
-                <h4>Example</h4>
-                <p>Practical examples showing how to use the tracker effectively.</p>
+            <section id="steps">
+                <h4>Steps</h4>
+                <h3> Part 1: Getting the user ID</h3>
+                <p>To begin, you'll need to find the user ID associated with the Instagram account you're interested in.<br>
+                    <ol>
+                        <li>Open your preferred web browser and go to the Instagram profile of the user whose information you want to retrieve. You can do this by typing their username directly in the URL. For example, if the username is <code>ch4fic</code> , you would go to <code>https://www.instagram.com/ch4fic/</code> . Allow the page to fully load before proceeding to the next step.</li>
+                        <br><a href="javascript:void(0);"><img src="ss/p1step1.png" alt="Screenshot of Instagram Profile" class="square-img"></a>
+                        <div id="myModal1" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="img01">
+                        </div>
+                        <br><li>With the Instagram profile page open, you will now need to access the HTML code that structures the page. Press <code>Ctrl + U</code> (Win) or <code>Cmd + Option + U</code> (Mac). This command opens a new tab displaying the complete HTML source code of the current page.</li>
+                        <br><a href="javascript:void(0);"><img src="ss/p1step2.png" alt="Screenshot of Page Source" class="square-img"></a>
+                        <div id="myModal2" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="img02">
+                        </div>
+                        <br><li>The user ID is embedded within the page's HTML code and can be located with a quick search. To find it, press <code>Ctrl + F</code> (Win) or <code>Cmd + F</code> (Mac) to bring up the search box within the source code tab. In the search box, type <code>"user_id"</code> (including the quotation marks) and hit <code>Enter</code>. This will highlight the exact location of the user ID in the source code. The highlight is a bit off as you can see in the image below, but that is because this line of page source is very long. In my case, the user ID is <code>8744238410</code> .</li>
+                        <br><a href="javascript:void(0);"><img src="ss/p1step3.png" alt="Screenshot of User ID" class="square-img"></a>
+                        <div id="myModal3" class="modal">
+                            <span class="close">&times;</span>
+                            <img class="modal-content" id="img03">
+                        </div>
+                    </ol>                    
             </section>
         </main>
         <aside id="updateLog">
@@ -46,5 +67,6 @@
     <footer>
         <p>Copyright &copy; 2024 InstagramTracker</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

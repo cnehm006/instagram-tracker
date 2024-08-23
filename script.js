@@ -113,8 +113,57 @@ function uploadList() {
     fileInput.click(); // Automatically open file dialog
 }
 
-
 function updateLastUpdatedTime() {
     lastUpdated = new Date().toLocaleString();
     document.getElementById('lastUpdated').textContent = `Last Updated: ${lastUpdated}`;
+}
+
+// Lightbox functionality for multiple images and modals
+
+// First image and modal
+var modal1 = document.getElementById('myModal1');
+var img1 = document.querySelector('img[src="ss/p1step1.png"]');
+var modalImg1 = document.getElementById('img01');
+
+img1.onclick = function() {
+    modal1.style.display = 'flex';
+    modalImg1.src = this.src;
+}
+
+// Second image and modal
+var modal2 = document.getElementById('myModal2');
+var img2 = document.querySelector('img[src="ss/p1step2.png"]');
+var modalImg2 = document.getElementById('img02');
+
+img2.onclick = function() {
+    modal2.style.display = 'flex';
+    modalImg2.src = this.src;
+}
+
+// Third image and modal
+var modal3 = document.getElementById('myModal3');
+var img3 = document.querySelector('img[src="ss/p1step3.png"]');
+var modalImg3 = document.getElementById('img03');
+
+img3.onclick = function() {
+    modal3.style.display = 'flex';
+    modalImg3.src = this.src;
+}
+
+// Close function for both modals
+var closeButtons = document.getElementsByClassName('close');
+
+for (var i = 0; i < closeButtons.length; i++) {
+    closeButtons[i].onclick = function() {
+        this.parentElement.style.display = 'none';
+    }
+}
+
+// Close the modal when clicking outside the image or pressing ESC
+window.onclick = function(event) {
+    if (event.target === modal1 || event.target === modal2 || event.key === "Escape") {
+        modal1.style.display = 'none';
+        modal2.style.display = 'none';
+        modal3.style.display = 'none';
+    }
 }
