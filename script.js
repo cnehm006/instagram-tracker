@@ -150,6 +150,56 @@ img3.onclick = function() {
     modalImg3.src = this.src;
 }
 
+// Fourth image and modal
+var modal4 = document.getElementById('myModal4');
+var img4 = document.querySelector('img[src="ss/p2step1.png"]');
+var modalImg4 = document.getElementById('img04');
+
+img4.onclick = function() {
+    modal4.style.display = 'flex';
+    modalImg4.src = this.src;
+}
+
+// Fifth image and modal
+var modal5 = document.getElementById('myModal5');
+var img5 = document.querySelector('img[src="ss/p2step2.png"]');
+var modalImg5 = document.getElementById('img05');
+
+img5.onclick = function() {
+    modal5.style.display = 'flex';
+    modalImg5.src = this.src;
+}
+
+// Sixth image and modal
+var modal6 = document.getElementById('myModal6');
+var img6 = document.querySelector('img[src="ss/p2step3.png"]');
+var modalImg6 = document.getElementById('img06');
+
+img6.onclick = function() {
+    modal6.style.display = 'flex';
+    modalImg6.src = this.src;
+}
+
+// Seventh image and modal
+var modal7 = document.getElementById('myModal7');
+var img7 = document.querySelector('img[src="ss/p2step4.png"]');
+var modalImg7 = document.getElementById('img07');
+
+img7.onclick = function() {
+    modal7.style.display = 'flex';
+    modalImg7.src = this.src;
+}
+
+// Eighth image and modal
+var modal8 = document.getElementById('myModal8');
+var img8 = document.querySelector('img[src="ss/p2step5.png"]');
+var modalImg8 = document.getElementById('img08');
+
+img8.onclick = function() {
+    modal8.style.display = 'flex';
+    modalImg8.src = this.src;
+}
+
 // Close function for both modals
 var closeButtons = document.getElementsByClassName('close');
 
@@ -165,5 +215,22 @@ window.onclick = function(event) {
         modal1.style.display = 'none';
         modal2.style.display = 'none';
         modal3.style.display = 'none';
+        modal4.style.display = 'none';
+        modal5.style.display = 'none';
+        modal6.style.display = 'none';
     }
 }
+
+document.querySelectorAll('.copy-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const codeBlock = button.nextElementSibling.querySelector('code').innerText;
+        navigator.clipboard.writeText(codeBlock).then(() => {
+            button.innerText = "Copied!";
+            setTimeout(() => {
+                button.innerText = "Copy Code";
+            }, 2000);
+        }).catch(err => {
+            console.log('Failed to copy text: ', err);
+        });
+    });
+});

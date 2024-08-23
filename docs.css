@@ -199,3 +199,63 @@ ol {
     cursor: pointer;
     z-index: 1001;
 }
+
+.code-block {
+    position: relative;
+    background-color: #2d2d2d; /* Dark background color */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    overflow: auto; /* Enables scrolling */
+    max-width: 100%;
+    color: #f8f8f2; /* Light text color for readability */
+}
+
+/* Wrapper to manage scrolling */
+.scroll-wrapper {
+    position: relative;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    margin-bottom: 1em; /* Adjusts spacing */
+}
+
+/* Specific styles for the scrollable code block */
+.code-block.scrollable {
+    max-height: 300px; /* Set your desired max height */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal overflow from pre tag, handled by the wrapper */
+}
+
+/* Override pre and code styles within .code-block */
+.code-block pre {
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background: none;
+    color: inherit;
+}
+
+.code-block code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 0.95em;
+    background: none; /* Removes background from individual code lines */
+    color: inherit; /* Inherits text color from the parent block */
+}
+
+.code-block .copy-btn {
+    position: sticky;
+    top: 1px;
+    right: 10px;
+    background-color: #696969;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.9em;
+    z-index: 1;
+}
+
+.code-block .copy-btn:hover {
+    background-color: #494949;
+}
