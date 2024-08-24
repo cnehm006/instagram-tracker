@@ -19,8 +19,12 @@
             <ul>
                 <li><a href="#introduction">Introduction</a></li>
                 <li><a href="#gettingStarted">Getting Started</a></li>
-                <li><a href="#steps">Steps</a></li>
+                <li><a href="#firstTime">First Time Tutorial</a></li>
+                <li><a href="#usingTool">Using The Tool</a></li>
             </ul>
+            <div class="back-to-tool">
+                <a href="index.html" class="tool-button">Back to Tool</a>
+            </div>
         </aside>
         <main>
             <section id="introduction">
@@ -32,8 +36,8 @@
                 <h4>Getting Started</h4>
                 <p>So, you'll need to retrieve the Instagram user ID of the user you want to track, and then use browser developer tools to send a request for your followers or following list. This involves running a few scripts in your browser's console to gather the necessary data. Ensure you're logged into Instagram and not in incognito mode for this process to work. This method will work if it's a public account OR if it's a private account and you're following it, because we're just web scraping and not actually accessing the Instagram API. Only the information already available to you will work with this, so no luck if you're blocked. This step-by-step tutorial includes every step needed.</p>
             </section>
-            <section id="steps">
-                <h4>Steps</h4>
+            <section id="firstTime">
+                <h4>First Time Tutorial</h4>
                 <h3> Part 1: Getting the user ID</h3>
                 <p>To begin, you'll need to find the user ID associated with the Instagram account you're interested in.</p>
                     <ol>
@@ -60,7 +64,7 @@
                 <h3> Part 2: Getting the lists</h3>
                 <p>Once you have retrieved the user ID, you can now proceed to extract the followers or following list. <b>Note: </b>this part may not work on Microsoft Edge due to Content Security Policy (CSP) restrictions. These restrictions prevent the necessary connections to Instagram’s servers, resulting in errors when attempting to fetch follower or following data.</p>
                     <ol>
-                        <li>First, you’ll need to open the browser console. This is where you will paste and execute the scripts that will fetch the data.<br>
+                        <li>First, you’ll need to open the browser console. This is where you will paste and execute the scripts that will fetch the data. You can do this in a new tab, but I recommend staying in the source page from the previous step.<br>
                             <ul>
                                 <li><b>Chrome:</b> Press <code>Ctrl + Shift + J</code> (Win) or <code>Cmd + Option + J</code> (Mac).</li>
                                 <li><b>Firefox:</b> Press <code>Ctrl + Shift + K</code> (Win) or <code>Cmd + Option + K</code> (Mac).</li>
@@ -196,9 +200,33 @@ if (options.list === 1) {
 One way to check for an issue is the make sure the page you go to in step <b>4.</b> has data. If it looks like this:<br><br>
 <b>{"data":{"user":{"edge_followed_by":{"count":196,"page_info":{"has_next_page":false,"end_cursor":null},"edges":[]},"edge_mutual_followed_by":{"count":0,"edges":[]}}},"status":"ok"}</b><br><br>
  then you are either not logged in, the user is private and you do not have access to view their follows/followers, or your browser is not allowing cookies and Instagram cannot confirm your identity.<br>
-                        <br>Now, just repeat what we did from <b>2.</b> to generate the other list (use <code>1</code> if you already used <code>2</code> in the first iteration and vice versa).</li>
+                        <br>Now, just repeat what we did from <b>2.</b> to generate the other list (use <code>1</code> if you already used <code>2</code> in the first iteration and vice versa).</li><br>
                     </ol>
             </section>
+            <section id="usingTool">
+                <h4>Using The Tool</h4>
+                <h3>Part 1: Loading and saving your generated lists</h3>
+                <p>Now that you’ve successfully generated the followers and following lists, you're ready to dive into using the InstagramTracker tool! This tool makes it incredibly easy to track changes in these lists over time.</p>
+                    <ol>
+                        <li>Navigate to the home page of the InstagramTracker tool <a href="index.html">here</a>.</li>
+                        <br><li>Copy the list of usernames you generated earlier (either followers or following) and paste it into the text box on the home page.</li>
+                        <br><li>Select whether the list you’re loading is the “Followers” list or the “Following” list from the dropdown menu.</li>
+                        <br><li>Click the <code>Load List</code> button to display the list of usernames into the tool.</li>
+                        <br><li>Repeat the process for the other list. If you’ve already loaded the "Followers" list, now load the "Following" list (or vice versa).</li>
+                    </ol>
+                <p>Once both lists are loaded, click the <code>Download Lists</code> button. This will save your current followers and following lists into a text file on your computer. Store this text file somewhere safe on your computer. You’ll need it later to compare with updated lists and see what’s changed. <strong>Do NOT edit the text files.</strong> Editing the text files can cause the tool to malfunction and may result in inaccurate tracking of changes. It is crucial to keep the integrity of the text files intact for the tool to work properly.</p><br>
+                <h3>Part 2: Comparing your lists</h3>
+                    <p>After a few days or whenever you want to check for changes, return to the InstagramTracker tool.</p>
+                    <ol>
+                        <li>Click the <code>Upload Lists</code> button and select the text file you saved earlier. This will reload your previous followers and following lists into the tool.</li>
+                        <br><li>Generate a new followers or following list from Instagram following the same steps as before (see part 2 of <a href="#firstTime">First Time Tutorial</a>), then copy and paste this new list into the text box.</li>
+                        <br><li> Select the correct list type (Followers or Following) from the dropdown menu, and then click <code>Compare List</code>. The tool will automatically show you the differences: which users have been removed and which new users have been added since the last time you saved your lists.</li>
+                        <br><li>Repeat the comparison for the other list as well (if you compared Followers, now do Following, or vice versa).</li>
+                    </ol>
+
+            <br><h1>Thank you for reading!</h1>
+            <p>With these straightforward steps, you can efficiently monitor changes in your Instagram followers and following lists. Whether you're analyzing follower trends, managing your network, or keeping a close eye on specific connections, this tool provides a reliable and user-friendly solution to help you stay informed. Leverage this tool to maintain an up-to-date view of your social connections - you never know who might be paying closer attention to you or who’s quietly stepping away.</p>
+            </section>            
         </main>
         <aside id="updateLog">
             <h3>Update Log</h3>

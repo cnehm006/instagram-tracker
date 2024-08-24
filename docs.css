@@ -259,3 +259,37 @@ ol {
 .code-block .copy-btn:hover {
     background-color: #494949;
 }
+
+/* Sticky bottom button for navigation */
+.back-to-tool {
+    position: sticky;
+    bottom: 0;
+    padding: 20px 0;
+    text-align: left;
+    background-color: #f4f4f4;
+    border-top: 1px solid #ccc; /* Optional: Add a top border to separate from other items */
+}
+
+/* Style for the tool button */
+.tool-button {
+    display: inline-block;
+    padding: .5rem 1rem;
+    font-weight: 500;
+    color: #000;
+    background-color: #f4f4f4;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px;
+}
+
+.tool-button:hover {
+    color: #ffffff;
+    background-color: #7c7c7c;
+    border-color: #7c7c7c;
+}
+
+.tool-button:active {
+    transform: translateY(0);
+    background-color: #ccc;
+}
