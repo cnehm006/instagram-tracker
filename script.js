@@ -63,7 +63,7 @@ function displayChanges(newEntries, removedEntries, listType) {
     const output = listType === 'followers' ? document.getElementById('followersOutput') : document.getElementById('followingOutput');
     const changesDiv = document.createElement('div');
     changesDiv.innerHTML = `<h3>New Entries (${newEntries.length}):</h3><p>${newEntries.join(', ')}</p><h3>Removed Entries (${removedEntries.length}):</h3><p>${removedEntries.join(', ')}</p>`;
-    output.insertBefore(changesDiv, output.childNodes[1]); // Inserts changes just below the count
+    output.insertBefore(changesDiv, output.childNodes[1]);
 }
 
 function downloadList() {
@@ -99,9 +99,8 @@ function uploadList() {
             const lastUpdatedIndex = lines.findIndex(line => line.startsWith('Last Updated: '));
             const lastUpdatedText = lastUpdatedIndex !== -1 ? lines[lastUpdatedIndex] : 'Last Updated: Never';
 
-            // Update the followers and following lists
-            followers = lines.slice(1, lines.indexOf(''));  // Assuming followers are listed first until a blank line
-            following = lines.slice(lines.indexOf('') + 2, lastUpdatedIndex);  // Assume following list ends just before the last updated line
+            followers = lines.slice(1, lines.indexOf(''));
+            following = lines.slice(lines.indexOf('') + 2, lastUpdatedIndex);
 
             displayUsers();
             document.getElementById('lastUpdated').textContent = lastUpdatedText;
@@ -110,7 +109,7 @@ function uploadList() {
         reader.readAsText(file);
     };
 
-    fileInput.click(); // Automatically open file dialog
+    fileInput.click();
 }
 
 function updateLastUpdatedTime() {
@@ -118,9 +117,6 @@ function updateLastUpdatedTime() {
     document.getElementById('lastUpdated').textContent = `Last Updated: ${lastUpdated}`;
 }
 
-// Lightbox functionality for multiple images and modals
-
-// First image and modal
 var modal1 = document.getElementById('myModal1');
 var img1 = document.querySelector('img[src="ss/p1step1.png"]');
 var modalImg1 = document.getElementById('img01');
@@ -130,7 +126,6 @@ img1.onclick = function() {
     modalImg1.src = this.src;
 }
 
-// Second image and modal
 var modal2 = document.getElementById('myModal2');
 var img2 = document.querySelector('img[src="ss/p1step2.png"]');
 var modalImg2 = document.getElementById('img02');
@@ -140,7 +135,6 @@ img2.onclick = function() {
     modalImg2.src = this.src;
 }
 
-// Third image and modal
 var modal3 = document.getElementById('myModal3');
 var img3 = document.querySelector('img[src="ss/p1step3.png"]');
 var modalImg3 = document.getElementById('img03');
@@ -150,7 +144,6 @@ img3.onclick = function() {
     modalImg3.src = this.src;
 }
 
-// Fourth image and modal
 var modal4 = document.getElementById('myModal4');
 var img4 = document.querySelector('img[src="ss/p2step1.png"]');
 var modalImg4 = document.getElementById('img04');
@@ -160,7 +153,6 @@ img4.onclick = function() {
     modalImg4.src = this.src;
 }
 
-// Fifth image and modal
 var modal5 = document.getElementById('myModal5');
 var img5 = document.querySelector('img[src="ss/p2step2.png"]');
 var modalImg5 = document.getElementById('img05');
@@ -170,7 +162,6 @@ img5.onclick = function() {
     modalImg5.src = this.src;
 }
 
-// Sixth image and modal
 var modal6 = document.getElementById('myModal6');
 var img6 = document.querySelector('img[src="ss/p2step3.png"]');
 var modalImg6 = document.getElementById('img06');
@@ -180,7 +171,6 @@ img6.onclick = function() {
     modalImg6.src = this.src;
 }
 
-// Seventh image and modal
 var modal7 = document.getElementById('myModal7');
 var img7 = document.querySelector('img[src="ss/p2step4.png"]');
 var modalImg7 = document.getElementById('img07');
@@ -190,7 +180,6 @@ img7.onclick = function() {
     modalImg7.src = this.src;
 }
 
-// Eighth image and modal
 var modal8 = document.getElementById('myModal8');
 var img8 = document.querySelector('img[src="ss/p2step5.png"]');
 var modalImg8 = document.getElementById('img08');
@@ -200,7 +189,6 @@ img8.onclick = function() {
     modalImg8.src = this.src;
 }
 
-// Ninth image and modal
 var modal9 = document.getElementById('myModal9');
 var img9 = document.querySelector('img[src="ss/p3step1.png"]');
 var modalImg9 = document.getElementById('img09');
@@ -210,7 +198,6 @@ img9.onclick = function() {
     modalImg9.src = this.src;
 }
 
-// Tenth image and modal
 var modal10 = document.getElementById('myModal10');
 var img10 = document.querySelector('img[src="ss/p3step2.png"]');
 var modalImg10 = document.getElementById('img10');
@@ -220,7 +207,6 @@ img10.onclick = function() {
     modalImg10.src = this.src;
 }
 
-// Eleventh image and modal
 var modal11 = document.getElementById('myModal11');
 var img11 = document.querySelector('img[src="ss/p3step3.png"]');
 var modalImg11 = document.getElementById('img11');
@@ -230,7 +216,6 @@ img11.onclick = function() {
     modalImg11.src = this.src;
 }
 
-// Twelvth image and modal
 var modal12 = document.getElementById('myModal12');
 var img12 = document.querySelector('img[src="ss/p3step4.png"]');
 var modalImg12 = document.getElementById('img12');
@@ -240,7 +225,6 @@ img12.onclick = function() {
     modalImg12.src = this.src;
 }
 
-// Thirteenth image and modal
 var modal13 = document.getElementById('myModal13');
 var img13 = document.querySelector('img[src="ss/p3step5.png"]');
 var modalImg13 = document.getElementById('img13');
@@ -250,7 +234,6 @@ img13.onclick = function() {
     modalImg13.src = this.src;
 }
 
-// Fourteenth image and modal
 var modal14 = document.getElementById('myModal14');
 var img14 = document.querySelector('img[src="ss/p3step6.png"]');
 var modalImg14 = document.getElementById('img14');
@@ -260,9 +243,6 @@ img14.onclick = function() {
     modalImg14.src = this.src;
 }
 
-
-
-// Close function for both modals
 var closeButtons = document.getElementsByClassName('close');
 
 for (var i = 0; i < closeButtons.length; i++) {
@@ -271,7 +251,6 @@ for (var i = 0; i < closeButtons.length; i++) {
     }
 }
 
-// Close the modal when clicking outside the image or pressing ESC
 window.onclick = function(event) {
     if (event.target === modal1 || event.target === modal2 || event.target === modal3 || event.target === modal4 || event.target === modal5 || event.target === modal6 || event.target === modal7 || event.target === modal8 || event.target === modal9 || event.target === modal10 || event.target === modal11 || event.target === modal12 || event.target === modal13 || event.target === modal14 || event.key === "Escape") {
         modal1.style.display = 'none';
