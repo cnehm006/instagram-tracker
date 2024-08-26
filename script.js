@@ -200,6 +200,68 @@ img8.onclick = function() {
     modalImg8.src = this.src;
 }
 
+// Ninth image and modal
+var modal9 = document.getElementById('myModal9');
+var img9 = document.querySelector('img[src="ss/p3step1.png"]');
+var modalImg9 = document.getElementById('img09');
+
+img9.onclick = function() {
+    modal9.style.display = 'flex';
+    modalImg9.src = this.src;
+}
+
+// Tenth image and modal
+var modal10 = document.getElementById('myModal10');
+var img10 = document.querySelector('img[src="ss/p3step2.png"]');
+var modalImg10 = document.getElementById('img10');
+
+img10.onclick = function() {
+    modal10.style.display = 'flex';
+    modalImg10.src = this.src;
+}
+
+// Eleventh image and modal
+var modal11 = document.getElementById('myModal11');
+var img11 = document.querySelector('img[src="ss/p3step3.png"]');
+var modalImg11 = document.getElementById('img11');
+
+img11.onclick = function() {
+    modal11.style.display = 'flex';
+    modalImg11.src = this.src;
+}
+
+// Twelvth image and modal
+var modal12 = document.getElementById('myModal12');
+var img12 = document.querySelector('img[src="ss/p3step4.png"]');
+var modalImg12 = document.getElementById('img12');
+
+img12.onclick = function() {
+    modal12.style.display = 'flex';
+    modalImg12.src = this.src;
+}
+
+// Thirteenth image and modal
+var modal13 = document.getElementById('myModal13');
+var img13 = document.querySelector('img[src="ss/p3step5.png"]');
+var modalImg13 = document.getElementById('img13');
+
+img13.onclick = function() {
+    modal13.style.display = 'flex';
+    modalImg13.src = this.src;
+}
+
+// Fourteenth image and modal
+var modal14 = document.getElementById('myModal14');
+var img14 = document.querySelector('img[src="ss/p3step6.png"]');
+var modalImg14 = document.getElementById('img14');
+
+img14.onclick = function() {
+    modal14.style.display = 'flex';
+    modalImg14.src = this.src;
+}
+
+
+
 // Close function for both modals
 var closeButtons = document.getElementsByClassName('close');
 
@@ -211,13 +273,21 @@ for (var i = 0; i < closeButtons.length; i++) {
 
 // Close the modal when clicking outside the image or pressing ESC
 window.onclick = function(event) {
-    if (event.target === modal1 || event.target === modal2 || event.key === "Escape") {
+    if (event.target === modal1 || event.target === modal2 || event.target === modal3 || event.target === modal4 || event.target === modal5 || event.target === modal6 || event.target === modal7 || event.target === modal8 || event.target === modal9 || event.target === modal10 || event.target === modal11 || event.target === modal12 || event.target === modal13 || event.target === modal14 || event.key === "Escape") {
         modal1.style.display = 'none';
         modal2.style.display = 'none';
         modal3.style.display = 'none';
         modal4.style.display = 'none';
         modal5.style.display = 'none';
         modal6.style.display = 'none';
+        modal7.style.display = 'none';
+        modal8.style.display = 'none';
+        modal9.style.display = 'none';
+        modal10.style.display = 'none';
+        modal11.style.display = 'none';
+        modal12.style.display = 'none';
+        modal13.style.display = 'none';
+        modal14.style.display = 'none';
     }
 }
 
